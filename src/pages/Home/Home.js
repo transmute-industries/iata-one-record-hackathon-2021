@@ -43,6 +43,9 @@ export const Home = () => {
                 . Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat.
               </Typography>
+              <Typography variant={"h3"} gutterBottom>
+                powered by
+              </Typography>
               <img
                 src={logo}
                 alt="Transmute Logo"
