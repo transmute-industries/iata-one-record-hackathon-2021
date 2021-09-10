@@ -2,6 +2,12 @@
 
 [![CD](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml/badge.svg)](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml)
 
+### [Presentation Slide Deck]()
+
+### [Demo Application](https://iata-one-record-2021.transmute.industries/)
+
+## Development
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
