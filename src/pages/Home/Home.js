@@ -51,16 +51,6 @@ export const Home = () => {
                 alt="Transmute Logo"
                 style={{ height: "42px", marginTop: "48px" }}
               />
-              <img
-                src={assets/iata-logo}
-                alt="IATA Logo"
-                style={{ height: "42px", marginTop: "48px" }}
-              />
-              <img
-                src={assets/dcsa-logo}
-                alt="DCSA Logo"
-                style={{ height: "42px", marginTop: "48px" }}
-              />
             </>
           }
         />
