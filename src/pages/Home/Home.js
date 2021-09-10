@@ -37,7 +37,7 @@ export const Home = () => {
                 >
                   VCs
                 </Link>
-                 . And parties into
+                 . Strings into
                  {" "}
                 <Link href="https://www.w3.org/TR/did-core" color={"secondary"}>
                   DIDs
