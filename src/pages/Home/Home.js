@@ -35,7 +35,7 @@ export const Home = () => {
                   color={"secondary"}
                 >
                   verifiable
-                </Link>
+                </Link>{" "}
                  data. Establish supply chain
                  {" "}
                 <Link href="https://www.w3.org/TR/did-core" color={"secondary"}>
