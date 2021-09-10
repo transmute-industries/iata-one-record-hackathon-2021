@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+[![CD](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml/badge.svg)](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
