@@ -28,20 +28,19 @@ export const Home = () => {
           description={
             <>
               <Typography variant={"h4"} gutterBottom>
-                Turning paper into data. 
-                Documents into 
+                Turn paper into 
                 {" "}
                 <Link
                   href="https://www.w3.org/TR/vc-data-model"
                   color={"secondary"}
                 >
-                  VCs
+                  verifiable
                 </Link>
-                 . Strings into
+                 data. Establish supply chain
                  {" "}
                 <Link href="https://www.w3.org/TR/did-core" color={"secondary"}>
-                  DIDs
-                </Link>{" "}
+                  trust
+                </Link>
                 . 
               </Typography>
               <Typography variant={"h6"} gutterBottom>
