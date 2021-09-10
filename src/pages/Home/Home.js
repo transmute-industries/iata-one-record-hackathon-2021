@@ -22,28 +22,29 @@ export const Home = () => {
         <Hero
           title={
             <Typography variant={"h1"} gutterBottom>
-              Lorem Ipsum
+              Proteus
             </Typography>
           }
           description={
             <>
-              <Typography variant={"h6"} gutterBottom>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor{" "}
-                <Link href="https://www.w3.org/TR/did-core" color={"secondary"}>
-                  DIDs
-                </Link>{" "}
-                ut labore et dolore magna{" "}
+              <Typography variant={"h4"} gutterBottom>
+                Turning paper into data. 
+                Documents into 
+                {" "}
                 <Link
                   href="https://www.w3.org/TR/vc-data-model"
                   color={"secondary"}
                 >
                   VCs
                 </Link>
-                . Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.
+                 . And parties into
+                 {" "}
+                <Link href="https://www.w3.org/TR/did-core" color={"secondary"}>
+                  DIDs
+                </Link>{" "}
+                . 
               </Typography>
-              <Typography variant={"h3"} gutterBottom>
+              <Typography variant={"h6"} gutterBottom>
                 powered by
               </Typography>
               <img
