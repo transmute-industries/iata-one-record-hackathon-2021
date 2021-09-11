@@ -123,6 +123,7 @@ export const theme = createTheme({
       main: darkBackgroundColor,
       dark: darken(darkBackgroundColor, 0.2),
       paper: lightBackgroundColor,
+      accordionSummary: darken(darkBackgroundColor, 0.2),
     },
     primary: {
       light: lighten(primaryColor, 0.3),
@@ -217,6 +218,25 @@ theme.overrides.MuiButton = {
     color: "white",
   },
 };
+
+// theme.overrides.MuiAccordion = {
+//   textPrimary: {
+//     color: theme.palette.primary.light,
+//     "&:hover": {
+//       backgroundColor: alpha(
+//         theme.palette.primary.light,
+//         theme.palette.action.hoverOpacity
+//       ),
+//       // Reset on touch devices, it doesn't add specificity
+//       "@media (hover: none)": {
+//         backgroundColor: "transparent",
+//       },
+//     },
+//   },
+//   containedSecondary: {
+//     color: "white",
+//   },
+// };
 
 export const Theme = ({ children }) => {
   return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;

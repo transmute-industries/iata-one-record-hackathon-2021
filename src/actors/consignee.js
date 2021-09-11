@@ -2,6 +2,12 @@ export const consignee = {
   name: "Go Monkey Toys",
   role: "consignee",
   website: "https://www.gomonkeytoys.com",
+  credentials: [
+    {
+      title: "Excellent Partner",
+      issuer: "did:web:dcsa.org:shipper:butterfly-rollers",
+    },
+  ],
   document: {
     "@context": [
       "https://www.w3.org/ns/did/v1",

@@ -2,6 +2,12 @@ export const shipper = {
   name: "Butterfly Rollers",
   role: "shipper",
   website: "https://www.butterfly-rollers.be",
+  credentials: [
+    {
+      title: "Excellent Partner",
+      issuer: "did:web:dcsa.org:carrier:msc",
+    },
+  ],
   document: {
     "@context": [
       "https://www.w3.org/ns/did/v1",

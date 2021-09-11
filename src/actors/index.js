@@ -1,3 +1,6 @@
+// service
+export * from "./transmute";
+
 // actors
 export * from "./shipper";
 export * from "./carrier";

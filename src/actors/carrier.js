@@ -2,6 +2,12 @@ export const carrier = {
   name: "MSC",
   role: "carrier",
   website: "https://www.msc.com",
+  credentials: [
+    {
+      title: "Excellent Partner",
+      issuer: "did:web:dcsa.org:shipper:butterfly-rollers",
+    },
+  ],
   document: {
     "@context": [
       "https://www.w3.org/ns/did/v1",

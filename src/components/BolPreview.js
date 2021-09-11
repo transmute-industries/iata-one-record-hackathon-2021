@@ -6,6 +6,8 @@ import { Tabs } from "./Tabs";
 
 import BolVc from "../data/bol.vc.json";
 
+import { CredentialPreview } from "./CredentialPreview";
+
 export const BolPreview = ({ action, onVerify, actor }) => {
   const vc = React.useMemo(() => {
     return { ...BolVc };
@@ -22,9 +24,7 @@ export const BolPreview = ({ action, onVerify, actor }) => {
       tabs={[
         {
           title: "Bill of Lading",
-          content: (
-            <AceEditor value={JSON.stringify(vc, null, 2)} type={"json"} />
-          ),
+          content: <CredentialPreview credential={vc} />,
         },
         {
           title: "DID Document",

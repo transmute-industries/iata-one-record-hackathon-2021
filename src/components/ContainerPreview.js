@@ -21,7 +21,7 @@ export const ContainerPreview = ({ container }) => {
           title: "DID Document",
           content: (
             <AceEditor
-              value={JSON.stringify(container, null, 2)}
+              value={JSON.stringify(container.document, null, 2)}
               type={"json"}
             />
           ),
