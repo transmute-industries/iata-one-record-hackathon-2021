@@ -1,9 +1,9 @@
 import React from "react";
 import Webcam from "react-webcam";
-// import { Button } from "@material-ui/core";
+
 const videoConstraints = {
   height: 720,
-  facingMode: "user",
+  facingMode: "environment",
 };
 
 export const WebcamCapture = ({ onCapture, action }) => {
@@ -18,7 +18,6 @@ export const WebcamCapture = ({ onCapture, action }) => {
 
   return (
     <>
-      {/* <Button onClick={capture}>Capture photo</Button> */}
       <Webcam
         audio={false}
         height={720}
