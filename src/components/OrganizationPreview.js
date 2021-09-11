@@ -42,21 +42,34 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const organizationCredentials = {
+  [actors.carrier.document.id]: [
+    {
+      title: "DCSA Member Carrier",
+      issuer: "did:web:transmute.industries",
+    },
+  ],
+  [actors.shipper.document.id]: [
+    {
+      title: "DCSA Trusted Shipper",
+      issuer: "did:web:transmute.industries",
+    },
+  ],
+  [actors.consignee.document.id]: [
+    {
+      title: "IATA Trusted Shipper",
+      issuer: "did:web:transmute.industries",
+    },
+  ],
+};
+
 let actorsIndex = {};
 Object.values(actors).forEach((actor) => {
   actorsIndex = {
     ...actorsIndex,
     [actor.document.id]: {
       ...actor,
-      credentials:
-        actor.name !== "Transmute"
-          ? [
-              {
-                title: "Excellent Partner",
-                issuer: "did:web:transmute.industries",
-              },
-            ]
-          : [],
+      credentials: organizationCredentials[actor.document.id],
     },
   };
 });

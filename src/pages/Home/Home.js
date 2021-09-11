@@ -28,19 +28,18 @@ export const Home = () => {
           description={
             <>
               <Typography variant={"h4"} gutterBottom>
-                Digitized paper.  
-                {" "}
+                Digitized paper.{" "}
                 <Link href="https://www.w3.org/TR/did-core" color={"secondary"}>
                   Trusted
-                </Link>
-                {" "} parties.                 {" "}
+                </Link>{" "}
+                parties.{" "}
                 <Link
                   href="https://www.w3.org/TR/vc-data-model"
                   color={"secondary"}
                 >
                   Verifiable
                 </Link>{" "}
-                 data. 
+                data.
               </Typography>
               <Typography variant={"h6"} gutterBottom>
                 powered by
@@ -72,14 +71,12 @@ export const Home = () => {
         <Grid container spacing={4}>
           <Grid item>
             <Card
-              title={"Lizard"}
-              image={
-                "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
-              }
+              title={"Carrier"}
+              image={"/carrier.jpg"}
               description={
                 <>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  Scan a paper bill of lading to convert it to a verifiable
+                  credential.
                 </>
               }
               actions={
@@ -93,14 +90,12 @@ export const Home = () => {
           </Grid>
           <Grid item>
             <Card
-              title={"Lizard"}
-              image={
-                "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
-              }
+              title={"Consignee"}
+              image={"./consignee.jpg"}
               description={
                 <>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  Scan a container number to verify the bill of lading and
+                  linked organization credentials.
                 </>
               }
               actions={
