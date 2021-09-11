@@ -8,7 +8,7 @@ export const container = {
       "https://w3id.org/security/suites/jws-2020/v1",
     ],
     id: "did:web:bic-boxtech.org:container:MSCU891823",
-    serivice: [
+    service: [
       {
         type: "ContainerRegistry",
         serviceEndpoint: "https://www.bic-boxtech.org/container/MSCU891823",

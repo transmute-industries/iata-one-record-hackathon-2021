@@ -13,14 +13,12 @@
   "credentialSubject": {
     "content": "🔥 WILL BE data captured from OCR",
     "document": {
-      "transportDocumentReference": "string",
       "placeOfIssue": {
         "UNLocationCode": "USNYC"
       },
       "issueDate": "2020-12-12",
       "shippedOnBoardDate": "2020-12-12",
       "receivedForShipmentDate": "2020-12-12",
-      "termsAndConditions": "string",
       "issuerCode": "MMCU",
       "issuerCodeListProvider": "NMFTA",
       "declaredValueCurrency": "DKK",
@@ -30,7 +28,6 @@
       "cargoMovementTypeAtDestination": "FCL",
       "receiptDeliveryTypeAtOrigin": "CY",
       "receiptDeliveryTypeAtDestination": "CY",
-      "serviceContractReference": "string",
       "shippingInstruction": {
         "shippingInstructionID": "e0559d83-00e2-438e-afd9-fdd610c1a008",
         "transportDocumentType": "SWB",
@@ -51,29 +48,20 @@
         "carrierBookingReference": "ABC709951",
         "cargoItems": [
           {
-            "cargoLineItems": [
-              {
-                "cargoLineItemID": "string",
-                "shippingMarks": "string"
-              }
-            ],
             "carrierBookingReference": "ABC709951",
-            "descriptionOfGoods": "string",
-            "HSCode": "string",
             "weight": 13000.3,
             "volume": 12,
             "weightUnit": "KGM",
             "volumeUnit": "CBM",
             "numberOfPackages": 18,
             "packageCode": "5H",
-            "equipmentReference": "APZU4812090"
+            "equipmentReference": "did:web:bic-boxtech.org:container:MSCU891823"
           }
         ],
         "utilizedTransportEquipments": [
           {
             "equipment": {
-              "equipmentReference": "APZU4812090",
-              "ISOEquipmentCode": "stri",
+              "equipmentReference": "did:web:bic-boxtech.org:container:MSCU891823",
               "tareWeight": 12000,
               "weightUnit": "KGM",
               "isShipperOwned": true
@@ -91,7 +79,7 @@
             },
             "seals": [
               {
-                "sealNumber": "string",
+                "sealNumber": "did:key:z5TcDENFrobXqa9oaBpAcqBqHawJ5Rs4iQJPpRCdd2CZuS1RRQEvkdwDyi4L1f7z1HUUgfLamaRCnDmXDmKXyX79bfQQhEbFm6tJJDBngRCdqeo4tNHNSiUVSxE3oSXwbYVr23vTpJApgQHHKKwWRCymc6Udnqm24rF2W8MBgWYW3CAjvocrb17qa9oEksA1XFEyVaxbk#z3tEFHh94KRoCQ81tDp7RpW8UHn92zpK9XVTEpRHkrkKDwEUTT8KH3qVyaoansNJBWvpXQ",
                 "sealSource": "CUS",
                 "sealType": "WIR"
               }
@@ -101,24 +89,19 @@
         "documentParties": [
           {
             "party": {
-              "partyName": "Asseco Denmark",
-              "taxReference1": "CVR-25645774",
-              "taxReference2": "CVR-25645774",
-              "publicKey": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFzaW",
-              "address": {
-                "name": "Henrik",
-                "street": "Kronprincessegade",
-                "streetNumber": "54",
-                "floor": "5. sal",
-                "postCode": "1306",
-                "city": "København",
-                "stateRegion": "N/A",
-                "country": "Denmark"
-              },
-              "nmftaCode": "MMCU"
+              "id": "did:web:dcsa.org:shipper:butterfly-rollers",
+              "partyName": "Butterfly Rollers",
+              "taxReference1": "CVR-25645774"
             },
-            "partyFunction": "DDS",
-            "displayedAddress": ["Kronprincessegade 54"],
+            "partyFunction": "OS"
+          },
+          {
+            "party": {
+              "id": "did:web:dcsa.org:consignee:go-monkey",
+              "partyName": "Go Monkey Toys",
+              "taxReference1": "CVR-12378894"
+            },
+            "partyFunction": "CN",
             "partyContactDetails": {
               "name": "Henrik",
               "phone": "+45 33364660",
@@ -145,31 +128,19 @@
                 "country": "Denmark"
               }
             },
-            "displayedName": "string",
+
             "locationType": "PRE"
-          }
-        ],
-        "references": [
-          {
-            "referenceType": "FF",
-            "referenceValue": "string"
           }
         ]
       },
       "charges": [
         {
-          "chargeType": "string",
           "currencyAmount": 1012.12,
           "currencyCode": "DKK",
           "paymentTerm": "PREPAID",
           "calculationBasis": "Per day",
           "unitPrice": 3456.6,
           "quantity": 34.4
-        }
-      ],
-      "clauses": [
-        {
-          "clauseContent": "string"
         }
       ],
       "transports": [
@@ -180,8 +151,8 @@
           "dischargeLocation": {
             "UNLocationCode": "DEDUS"
           },
-          "plannedDepartureDate": "string",
-          "plannedArrivalDate": "string",
+          "plannedDepartureDate": "2018-12-11T03:50:55Z",
+          "plannedArrivalDate": "2019-12-11T03:50:55Z",
           "modeOfTransport": "VESSEL",
           "vesselIMONumber": "1801323",
           "carrierVoyageNumber": "2103S",

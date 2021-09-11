@@ -38,17 +38,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const TinyCredential = ({ title, issuer, description }) => {
+export const TinyCredential = ({ title, issuer, logo, description }) => {
   const classes = useStyles();
 
+  const avatar = logo ? (
+    <>
+      <Avatar className={classes.avatar} src={logo}></Avatar>
+    </>
+  ) : (
+    <>
+      <Avatar aria-label="proof" className={classes.avatar}>
+        <CloudDoneIcon className={classes.avatarIcon} />
+      </Avatar>
+    </>
+  );
   return (
     <>
       <CardHeader
-        avatar={
-          <Avatar aria-label="proof" className={classes.avatar}>
-            <CloudDoneIcon className={classes.avatarIcon} />
-          </Avatar>
-        }
+        avatar={avatar}
         title={title}
         subheader={
           <>
