@@ -8,7 +8,7 @@ export const bol = {
       "https://w3id.org/security/suites/jws-2020/v1",
     ],
     id: "did:web:msc.com:bol:MSCUKK871206",
-    serivice: [
+    service: [
       {
         type: "BillOfLadingRegistry",
         serviceEndpoint: "https://www.msc.com/bol/MSCUKK871206",

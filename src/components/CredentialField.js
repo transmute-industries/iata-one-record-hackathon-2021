@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useDebugValue } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 import _ from "lodash";
+import { useHistory } from "react-router-dom";
 
 import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
@@ -18,28 +19,16 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const credentialUtil = {
-  displayType: (type) => {
-    const t = _.cloneDeep(type);
-    let newType = "";
-    if (Array.isArray(t)) {
-      if (t.length) {
-        newType = t.pop();
-      }
-    } else if (t) {
-      newType += t;
-    }
-    return _.startCase(newType);
-  },
-};
-
 export const CredentialField = ({ label, value }) => {
+  const history = useHistory();
   const classes = useStyles();
   let correctedLabel = label;
 
   if (label === "Id") {
     correctedLabel = "ID";
   }
+
+  const isDid = value.toString().indexOf("did:") === 0;
 
   const renderValue = (value) => {
     if (value === true) {
@@ -53,8 +42,7 @@ export const CredentialField = ({ label, value }) => {
 
   return (
     <div className={classes.root}>
-      {/* For multiline input, print preview clips text */}
-      {label !== "Id" && label !== "Type" && (
+      {
         <FormControl size="small" fullWidth variant="standard">
           <InputLabel shrink style={{ fontWeight: "600" }}>
             {correctedLabel}
@@ -85,25 +73,38 @@ export const CredentialField = ({ label, value }) => {
                 />
               </>
             ) : (
-              <> {renderValue(value)}</>
+              <>
+                {isDid ? (
+                  <Chip
+                    style={{ marginTop: "8px" }}
+                    variant="outlined"
+                    color={"secondary"}
+                    avatar={
+                      <Avatar>
+                        <PublicIcon style={{ color: "#FFF" }} />
+                      </Avatar>
+                    }
+                    label={value}
+                    onClick={() => {
+                      if (value.indexOf("did:key") === 0) {
+                        window.open(
+                          "https://did.key.transmute.industries/" + value
+                        );
+                      } else {
+                        value.indexOf("did:web:dcsa.org") === 0
+                          ? history.push("/organizations/" + value)
+                          : history.push("/documents/" + value);
+                      }
+                    }}
+                  />
+                ) : (
+                  renderValue(value)
+                )}
+              </>
             )}
           </span>
         </FormControl>
-      )}
-      {(label === "Id" || label === "Type") && (
-        <TextField
-          size="small"
-          label={correctedLabel}
-          value={label === "Type" ? credentialUtil.displayType(value) : value}
-          fullWidth
-          multiline
-          InputProps={{
-            disableUnderline: true,
-            className: classes.textarea,
-          }}
-          variant="filled"
-        />
-      )}
+      }
     </div>
   );
 };

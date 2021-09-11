@@ -42,12 +42,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const transmutePartner = {
+  logo: "/proteus-logo.png",
+  title: "Transmute Verified Partner",
+  issuer: "did:web:transmute.industries",
+};
+
 const organizationCredentials = {
   [actors.carrier.document.id]: [
     {
       title: "DCSA Member Carrier",
       issuer: "did:web:transmute.industries",
     },
+    transmutePartner,
   ],
   [actors.shipper.document.id]: [
     {
@@ -60,6 +67,7 @@ const organizationCredentials = {
       title: "IATA Trusted Shipper",
       issuer: "did:web:transmute.industries",
     },
+    transmutePartner,
   ],
 };
 

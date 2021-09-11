@@ -1,5 +1,7 @@
 # Proteus
 
+> Digitized paper. Trusted parties. Verifiable data.
+
 [![CD](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml/badge.svg)](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml)
 
 ### [Presentation Slide Deck](https://docs.google.com/presentation/d/1zZP-9OvD8Ew72_nTGl3abLCH6_Ra0DUd_g8e8J74XOw/view)
@@ -8,19 +10,34 @@
 
 ## Demo Instructions
 
-### Issuer Role
+### Carrier / Issuer Role
 
 1. Print out the Bill of Lading Examples from [here](./public/sanitized-bols)
 2. Go [here](https://iata-one-record-2021.transmute.industries/issue)
 3. Focus the camera on the Bill of Lading Number, and click Scan.
 4. Review the extracted credential data and click Issue.
 
-### Verifier Role
+### Consignee / Verifier Role
 
-1. Print out a container number image (TBD)
+1. Print out a container number image
 2. Go [here](https://iata-one-record-2021.transmute.industries/verify)
 3. Focus the camera on the container number, and click Scan.
 4. Review the resolved verifiable credential, click Verify, see console for details (needs more ux)
+
+### General Navigation
+
+Browse the organiations and documents which we have assigned decentralized identifiers and credentials, by using the sidebar.
+
+## Built With
+
+- [Decentralized Identifiers](https://github.com/w3c/did-core)
+- [Verifiable Credentials](https://github.com/w3c/vc-data-model/)
+- [vc.js](https://github.com/transmute-industries/verifiable-data)
+- [did web](https://github.com/w3c-ccg/did-method-web)
+- react
+- [material ui](https://material-ui.com/)
+- github
+- [tesseract.js](https://tesseract.projectnaptha.com/)
 
 ## Development
 
