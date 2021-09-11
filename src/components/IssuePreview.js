@@ -7,7 +7,7 @@ import { Tabs } from "./Tabs";
 import BolTemplate from "../data/bol.template.json";
 
 import { bol, carrier } from "../actors";
-
+import { CredentialPreview } from "./CredentialPreview";
 export const IssuePreview = ({ text, onIssue, action }) => {
   const template = React.useMemo(() => {
     return {
@@ -30,6 +30,10 @@ export const IssuePreview = ({ text, onIssue, action }) => {
   return (
     <Tabs
       tabs={[
+        {
+          title: "Bill Of Lading",
+          content: <CredentialPreview credential={template} />,
+        },
         {
           title: "Verifiable Credential",
           content: (

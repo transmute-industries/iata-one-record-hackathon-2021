@@ -14,6 +14,8 @@ import { Drawer } from "../components/Drawer";
 
 import { Link as RouteLink } from "react-router-dom";
 
+import logo from "../assets/logo-with-text-white.svg";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -63,7 +65,15 @@ export const Page = (props) => {
 
   const drawer = (
     <div>
-      <div className={classes.toolbar} />
+      <div
+        className={classes.toolbar}
+        style={{ padding: "16px", height: "32px" }}
+      >
+        <a href="https://transmute.industries">
+          <img src={logo} alt="Transmute Logo" style={{ height: "32px" }} />
+        </a>
+      </div>
+
       <Divider />
       <Drawer />
     </div>
@@ -92,8 +102,7 @@ export const Page = (props) => {
           <div style={{ marginRight: "64px" }}>{callToAction}</div>
         </Toolbar>
       </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+      <nav className={classes.drawer} aria-label="proteus navigation">
         <Hidden smUp implementation="css">
           <MaterialDrawer
             variant="temporary"

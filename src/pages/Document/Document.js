@@ -41,21 +41,32 @@ export const Document = () => {
     ),
   };
 
+  const titles = {
+    [BolVc.id]: "Bill of Lading",
+    [container.document.id]: "Container",
+  };
+
+  const title = titles[did];
+
   return (
     <Page
-      title={"Document " + did}
+      title={title}
       callToAction={
         {
           preview: (
-            <Button
-              variant={"contained"}
-              color={"secondary"}
-              onClick={() => {
-                setAction("verify");
-              }}
-            >
-              Verify
-            </Button>
+            <>
+              {did !== container.document.id && (
+                <Button
+                  variant={"contained"}
+                  color={"secondary"}
+                  onClick={() => {
+                    setAction("verify");
+                  }}
+                >
+                  Verify
+                </Button>
+              )}
+            </>
           ),
         }[stage]
       }
