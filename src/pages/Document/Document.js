@@ -1,38 +1,25 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { Page } from "../../components/Page";
 import { BolPreview } from "../../components/BolPreview";
+import { ContainerPreview } from "../../components/ContainerPreview";
+
 import { Loading } from "../../components/Loading";
 
 import { Verifier } from "../../services/Verifier";
 
-import { WebcamCapture } from "../../components/WebcamCapture";
-
-import { Scanner } from "../../services/Scanner";
-
 import BolVc from "../../data/bol.vc.json";
 
-export const Verify = () => {
-  const history = useHistory();
+import { container, bol } from "../../actors";
 
+export const Document = () => {
   const { did } = useParams();
 
   const [stage, setStage] = React.useState(did ? "preview" : "capture");
   const [action, setAction] = React.useState("verify");
-
-  const handleCapture = async (image) => {
-    console.info("Scanning...");
-    console.info(image);
-    setStage("processing");
-    const text = await Scanner.scan(image);
-    console.info("Extracted...");
-    console.info(text);
-    setStage("preview");
-    history.push("/documents/" + BolVc.id);
-  };
 
   const handleVerify = async (verifiableCredential) => {
     setStage("verifying");
@@ -46,25 +33,19 @@ export const Verify = () => {
   };
 
   const content = {
-    [BolVc.id]: <BolPreview action={action} onVerify={handleVerify} />,
+    [BolVc.id]: (
+      <BolPreview actor={bol} action={action} onVerify={handleVerify} />
+    ),
+    [container.document.id]: (
+      <ContainerPreview actor={container} container={container} />
+    ),
   };
 
   return (
     <Page
-      title={did ? "Document " + did : "Scan Document"}
+      title={"Document " + did}
       callToAction={
         {
-          capture: (
-            <Button
-              variant={"contained"}
-              color={"secondary"}
-              onClick={() => {
-                setAction("processing");
-              }}
-            >
-              Scan
-            </Button>
-          ),
           preview: (
             <Button
               variant={"contained"}
@@ -81,8 +62,6 @@ export const Verify = () => {
     >
       {
         {
-          capture: <WebcamCapture action={action} onCapture={handleCapture} />,
-          processing: <Loading message={"Processing image..."} fullPage />,
           preview: <> {content[did]}</>,
           verifying: <Loading message={"Verifying credential..."} fullPage />,
         }[stage]

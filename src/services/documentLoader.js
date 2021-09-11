@@ -1,13 +1,13 @@
 import { contexts } from "./contexts";
 
-import { issuer } from "../actors";
+import { carrier } from "../actors";
 
 export const documentLoader = (iri) => {
   if (contexts[iri]) {
     return { document: contexts[iri] };
   }
-  if (iri.startsWith(issuer.document.id)) {
-    return { document: issuer.document };
+  if (iri.startsWith(carrier.document.id)) {
+    return { document: carrier.document };
   }
   const message = "Unsupported iri " + iri;
   console.error(message);

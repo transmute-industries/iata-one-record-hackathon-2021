@@ -1,13 +1,14 @@
-import assertionMethodKey from "../data/assertionMethod.key.json";
+import assertionMethodKey from "../data/carrier.private.key.json";
 import { JsonWebKey, JsonWebSignature } from "@transmute/json-web-signature";
 import { documentLoader } from "./documentLoader";
 import { verifiable } from "@transmute/vc.js";
 
-import { issuer } from "../actors";
+import { carrier } from "../actors";
 
+// carrier is the issuer
 const issuerKey = { ...assertionMethodKey };
-issuerKey.id = issuerKey.id.replace(issuerKey.controller, issuer.document.id);
-issuerKey.controller = issuer.document.id;
+issuerKey.id = issuerKey.id.replace(issuerKey.controller, carrier.document.id);
+issuerKey.controller = carrier.document.id;
 
 export const Issuer = {
   issue: async (template) => {

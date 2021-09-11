@@ -6,11 +6,188 @@
       "@vocab": "https://iata.example.com/vocab#"
     }
   ],
-  "id": "did:web:dcsa.example.com:bol:MSCUJL010426",
+  "id": "🔥 WILL BE bol.document.id",
   "type": ["VerifiableCredential", "BillOfLadingCertificate"],
   "issuanceDate": "2019-12-11T03:50:55Z",
-  "issuer": "did:example:123",
+  "issuer": "🔥 WILL BE carrier.document.id",
   "credentialSubject": {
-    "content": ""
+    "content": "🔥 WILL BE data captured from OCR",
+    "document": {
+      "transportDocumentReference": "string",
+      "placeOfIssue": {
+        "UNLocationCode": "USNYC"
+      },
+      "issueDate": "2020-12-12",
+      "shippedOnBoardDate": "2020-12-12",
+      "receivedForShipmentDate": "2020-12-12",
+      "termsAndConditions": "string",
+      "issuerCode": "MMCU",
+      "issuerCodeListProvider": "NMFTA",
+      "declaredValueCurrency": "DKK",
+      "declaredValue": 1231.1,
+      "numberOfRiderPages": 2,
+      "cargoMovementTypeAtOrigin": "FCL",
+      "cargoMovementTypeAtDestination": "FCL",
+      "receiptDeliveryTypeAtOrigin": "CY",
+      "receiptDeliveryTypeAtDestination": "CY",
+      "serviceContractReference": "string",
+      "shippingInstruction": {
+        "shippingInstructionID": "e0559d83-00e2-438e-afd9-fdd610c1a008",
+        "transportDocumentType": "SWB",
+        "isShippedOnboardType": true,
+        "numberOfCopies": 2,
+        "numberOfOriginals": 4,
+        "preCarriageUnderShippersResponsibility": "VESSEL",
+        "invoicePayableAt": {
+          "UNLocationCode": "USNYC",
+          "address": {
+            "cityName": "København",
+            "stateRegion": "N/A",
+            "country": "Denmark"
+          }
+        },
+        "isElectronic": true,
+        "isChargesDisplayed": true,
+        "carrierBookingReference": "ABC709951",
+        "cargoItems": [
+          {
+            "cargoLineItems": [
+              {
+                "cargoLineItemID": "string",
+                "shippingMarks": "string"
+              }
+            ],
+            "carrierBookingReference": "ABC709951",
+            "descriptionOfGoods": "string",
+            "HSCode": "string",
+            "weight": 13000.3,
+            "volume": 12,
+            "weightUnit": "KGM",
+            "volumeUnit": "CBM",
+            "numberOfPackages": 18,
+            "packageCode": "5H",
+            "equipmentReference": "APZU4812090"
+          }
+        ],
+        "utilizedTransportEquipments": [
+          {
+            "equipment": {
+              "equipmentReference": "APZU4812090",
+              "ISOEquipmentCode": "stri",
+              "tareWeight": 12000,
+              "weightUnit": "KGM",
+              "isShipperOwned": true
+            },
+            "cargoGrossWeightUnit": "KGM",
+            "cargoGrossWeight": 12000,
+            "activeReeferSettings": {
+              "temperatureMin": -18.1,
+              "temperatureMax": 64.3,
+              "temperatureUnit": "CEL",
+              "humidityMin": 80,
+              "humidityMax": 100,
+              "ventilationMin": 266,
+              "ventilationMax": 296
+            },
+            "seals": [
+              {
+                "sealNumber": "string",
+                "sealSource": "CUS",
+                "sealType": "WIR"
+              }
+            ]
+          }
+        ],
+        "documentParties": [
+          {
+            "party": {
+              "partyName": "Asseco Denmark",
+              "taxReference1": "CVR-25645774",
+              "taxReference2": "CVR-25645774",
+              "publicKey": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFzaW",
+              "address": {
+                "name": "Henrik",
+                "street": "Kronprincessegade",
+                "streetNumber": "54",
+                "floor": "5. sal",
+                "postCode": "1306",
+                "city": "København",
+                "stateRegion": "N/A",
+                "country": "Denmark"
+              },
+              "nmftaCode": "MMCU"
+            },
+            "partyFunction": "DDS",
+            "displayedAddress": ["Kronprincessegade 54"],
+            "partyContactDetails": {
+              "name": "Henrik",
+              "phone": "+45 33364660",
+              "email": "info@asseco.dk"
+            },
+            "isToBeNotified": true
+          }
+        ],
+        "shipmentLocations": [
+          {
+            "location": {
+              "locationName": "Eiffel Tower",
+              "latitude": "48.85855005644273",
+              "longitude": "2.294492036190964",
+              "UNLocationCode": "USNYC",
+              "address": {
+                "name": "Henrik",
+                "street": "Kronprincessegade",
+                "streetNumber": "54",
+                "floor": "5. sal",
+                "postCode": "1306",
+                "city": "København",
+                "stateRegion": "N/A",
+                "country": "Denmark"
+              }
+            },
+            "displayedName": "string",
+            "locationType": "PRE"
+          }
+        ],
+        "references": [
+          {
+            "referenceType": "FF",
+            "referenceValue": "string"
+          }
+        ]
+      },
+      "charges": [
+        {
+          "chargeType": "string",
+          "currencyAmount": 1012.12,
+          "currencyCode": "DKK",
+          "paymentTerm": "PREPAID",
+          "calculationBasis": "Per day",
+          "unitPrice": 3456.6,
+          "quantity": 34.4
+        }
+      ],
+      "clauses": [
+        {
+          "clauseContent": "string"
+        }
+      ],
+      "transports": [
+        {
+          "loadLocation": {
+            "UNLocationCode": "NLRTM"
+          },
+          "dischargeLocation": {
+            "UNLocationCode": "DEDUS"
+          },
+          "plannedDepartureDate": "string",
+          "plannedArrivalDate": "string",
+          "modeOfTransport": "VESSEL",
+          "vesselIMONumber": "1801323",
+          "carrierVoyageNumber": "2103S",
+          "isUnderShippersResponsibility": false
+        }
+      ]
+    }
   }
 }

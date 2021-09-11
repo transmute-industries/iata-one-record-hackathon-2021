@@ -171,9 +171,10 @@ export const theme = createTheme({
       fontFamily: "Rajdhani",
     },
     h5: {
-      fontSize: "1.25em",
-      fontWeight: 600,
-      fontFamily: "Rajdhani",
+      fontSize: ".9em",
+      fontFamily: "Roboto Condensed",
+      letterSpacing: ".1em",
+      textTransform: "uppercase",
     },
     h6: {},
     subtitle1: {},

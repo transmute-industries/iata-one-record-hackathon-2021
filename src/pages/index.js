@@ -4,13 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { Issue } from "./Issue";
 import { Verify } from "./Verify";
+import { Organization } from "./Organization";
+import { Document } from "./Document";
 
 export default function Pages() {
   return (
     <Router>
       <Switch>
-        <Route path="/verify/:did">
-          <Verify />
+        <Route path="/organizations/:did">
+          <Organization />
+        </Route>
+        <Route path="/documents/:did">
+          <Document />
         </Route>
         <Route path="/verify">
           <Verify />

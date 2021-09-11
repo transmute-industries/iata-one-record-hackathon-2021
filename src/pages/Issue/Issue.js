@@ -47,7 +47,7 @@ export const Issue = () => {
     setTimeout(() => {
       console.info("Issuing...");
       console.info(JSON.stringify(verifiableCredential, null, 2));
-      history.push("/verify/" + verifiableCredential.id);
+      history.push("/documents/" + verifiableCredential.id);
     }, 3 * 1000);
   };
 

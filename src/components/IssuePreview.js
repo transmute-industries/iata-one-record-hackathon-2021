@@ -5,12 +5,20 @@ import { AceEditor } from "./AceEditor";
 import { Tabs } from "./Tabs";
 
 import BolTemplate from "../data/bol.template.json";
-import { issuer } from "../actors";
+
+import { bol, carrier } from "../actors";
+
 export const IssuePreview = ({ text, onIssue, action }) => {
   const template = React.useMemo(() => {
-    return { ...BolTemplate, issuer: issuer.document.id };
+    return {
+      ...BolTemplate,
+      // 🔥 overriding template values here.
+      id: bol.document.id,
+      issuer: carrier.document.id,
+    };
   }, []);
 
+  // 🔥 overriding template values here.
   template.credentialSubject.content = text;
 
   React.useEffect(() => {
