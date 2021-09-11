@@ -5,6 +5,9 @@ import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 import _ from "lodash";
 
+import Chip from "@material-ui/core/Chip";
+import Avatar from "@material-ui/core/Avatar";
+import PublicIcon from "@material-ui/icons/Public";
 const useStyles = makeStyles(() => ({
   root: {
     width: "100%",
@@ -27,6 +30,8 @@ const credentialUtil = {
   },
 };
 
+const uneceCodes = ["ASFTI", "DEDUS", "USNYC"];
+
 export const CredentialField = ({ label, value }) => {
   const classes = useStyles();
   let correctedLabel = label;
@@ -34,6 +39,16 @@ export const CredentialField = ({ label, value }) => {
   if (label === "Id") {
     correctedLabel = "ID";
   }
+
+  const renderValue = (value) => {
+    if (value === true) {
+      return "Yes";
+    }
+    if (value === false) {
+      return "No";
+    }
+    return value;
+  };
 
   return (
     <div className={classes.root}>
@@ -49,7 +64,28 @@ export const CredentialField = ({ label, value }) => {
               overflowWrap: "break-word",
             }}
           >
-            {value}
+            {uneceCodes.includes(value) ? (
+              <>
+                <Chip
+                  style={{ marginTop: "8px" }}
+                  variant="outlined"
+                  color={"secondary"}
+                  avatar={
+                    <Avatar>
+                      <PublicIcon style={{ color: "#FFF" }} />
+                    </Avatar>
+                  }
+                  label={value}
+                  onClick={() => {
+                    window.open(
+                      `https://service.unece.org/trade/uncefact/vocabulary/unlocode-as/#${value}`
+                    );
+                  }}
+                />
+              </>
+            ) : (
+              <> {renderValue(value)}</>
+            )}
           </span>
         </FormControl>
       )}

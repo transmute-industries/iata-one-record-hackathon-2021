@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 const objToCustomActions = (obj) => {
   if (obj.type) {
     if (obj.type === "PostalAddress" || obj.type.includes("PostalAddress")) {
-      return <Grid item>handle post address</Grid>;
+      return <Grid item></Grid>;
     }
   }
   return undefined;
