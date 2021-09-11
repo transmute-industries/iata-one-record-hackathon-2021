@@ -8,6 +8,9 @@ import _ from "lodash";
 import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
 import PublicIcon from "@material-ui/icons/Public";
+
+import { UnEce } from "../services/UnEce";
+
 const useStyles = makeStyles(() => ({
   root: {
     width: "100%",
@@ -29,8 +32,6 @@ const credentialUtil = {
     return _.startCase(newType);
   },
 };
-
-const uneceCodes = ["ASFTI", "DEDUS", "USNYC"];
 
 export const CredentialField = ({ label, value }) => {
   const classes = useStyles();
@@ -64,7 +65,7 @@ export const CredentialField = ({ label, value }) => {
               overflowWrap: "break-word",
             }}
           >
-            {uneceCodes.includes(value) ? (
+            {UnEce.codes.includes(value) ? (
               <>
                 <Chip
                   style={{ marginTop: "8px" }}
