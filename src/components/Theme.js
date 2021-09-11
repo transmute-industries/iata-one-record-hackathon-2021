@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
 import {
   darken,
   lighten,
@@ -12,7 +12,7 @@ import blue from "@material-ui/core/colors/blue";
 const darkerLightGrey = "#8286a3";
 
 const primaryColor = "#594aa8";
-const secondaryColor = blue["200"];
+const secondaryColor = blue["400"];
 
 const lightBackgroundColor = "#2a2d4c";
 const darkBackgroundColor = "#151726";
@@ -22,7 +22,7 @@ const successColor = "#48caca";
 const font4 = '"Rajdhani"';
 
 // Ref defaults: https://material-ui.com/customization/default-theme/#explore
-export const theme = createMuiTheme({
+export const theme = createTheme({
   overrides: {
     MuiAppBar: {
       root: {

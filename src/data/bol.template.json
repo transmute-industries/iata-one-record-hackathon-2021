@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/traceability/v1",
+    {
+      "@vocab": "https://iata.example.com/vocab#"
+    }
+  ],
+  "id": "did:web:dcsa.example.com:bol:MSCUJL010426",
+  "type": ["VerifiableCredential", "BillOfLadingCertificate"],
+  "issuanceDate": "2019-12-11T03:50:55Z",
+  "issuer": "did:example:123",
+  "credentialSubject": {
+    "content": ""
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/traceability/v1",
+    {
+      "@vocab": "https://iata.example.com/vocab#"
+    }
+  ],
+  "id": "did:web:dcsa.example.com:bol:MSCUJL010426",
+  "type": ["VerifiableCredential", "BillOfLadingCertificate"],
+  "issuanceDate": "2019-12-11T03:50:55Z",
+  "issuer": "did:web:iata.example.com:123",
+  "credentialSubject": {
+    "content": "\nW1 G T C IO ¥ (AT ,ltlfl_lf_lﬂlilﬂll s\nBILL OF LADING No, MSCUJL010426\nNON-NEGOTIABLE COPY i gt e ot )\n"
+  },
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2021-09-11T01:53:12Z",
+    "verificationMethod": "did:web:iata.example.com:123#z6MkfYcBV8jdBM1dzxUkR1Vm7Rwrx55eZNqADGu67ruMBTq1",
+    "proofPurpose": "assertionMethod",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..HJ_a1WVTS48VGkRcjuK0H1PBxFfxfwQ4ijak7phiQXCS6A_mWJ3EbIJCvfvU1WYlMHexwrTEffg8RHe6KQYyCA"
+  }
+}

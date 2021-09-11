@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Page = (props) => {
-  const { children, title } = props;
+  const { children, title, callToAction } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -88,6 +88,8 @@ export const Page = (props) => {
               {title || "Lorem Ipsum"}
             </Typography>
           </RouteLink>
+          <div style={{ flexGrow: 1 }}></div>
+          <div>{callToAction}</div>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">

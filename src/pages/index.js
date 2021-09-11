@@ -9,6 +9,9 @@ export default function Pages() {
   return (
     <Router>
       <Switch>
+        <Route path="/verify/:did">
+          <Verify />
+        </Route>
         <Route path="/verify">
           <Verify />
         </Route>
