@@ -89,7 +89,7 @@ export const Page = (props) => {
             </Typography>
           </RouteLink>
           <div style={{ flexGrow: 1 }}></div>
-          <div>{callToAction}</div>
+          <div style={{ marginRight: "64px" }}>{callToAction}</div>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
