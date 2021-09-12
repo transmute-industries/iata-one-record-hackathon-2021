@@ -4,7 +4,7 @@
 
 [![CD](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml/badge.svg)](https://github.com/transmute-industries/iata-one-record-hackathon-2021/actions/workflows/cd.yml)
 
-### [Presentation Slide Deck](https://docs.google.com/presentation/d/1zZP-9OvD8Ew72_nTGl3abLCH6_Ra0DUd_g8e8J74XOw/view)
+### [Presentation Slide Deck](https://docs.google.com/presentation/d/1B0VIPOb0R-0qs31xV9hsNi_Hr-A08EHUF41JEjmde2U/edit?usp=sharing)
 
 ### [Demo Application](https://iata-one-record-2021.transmute.industries/)
 
